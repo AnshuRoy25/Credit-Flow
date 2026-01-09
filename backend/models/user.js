@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     minlength: 6
   },
 
-  // Profile Info (Profile Tab)
+  // Profile Info
   profile: {
     fullName: {
       type: String,
@@ -53,7 +53,7 @@ const userSchema = new mongoose.Schema({
     }
   },
 
-  // Bank Details (Profile Tab)
+  // Bank Details
   bankDetails: {
     bankName: {
       type: String,
@@ -73,13 +73,12 @@ const userSchema = new mongoose.Schema({
       required: true
     },
     cardExpiry: {
-      type: String, // MM/YY format
+      type: String,
       required: true
-    },
-    // atmPin: { type: String, required: true }, // NEVER store PIN!
+    }
   },
 
-  // Identity Verification (Registration Step 3)
+  // Identity Verification
   identity: {
     aadhaarNumber: {
       type: String,
@@ -100,17 +99,46 @@ const userSchema = new mongoose.Schema({
     }
   },
 
-  // Loan Applications (My Applications Tab)
+  // Loan Applications - THIS IS THE IMPORTANT PART
   loanApplications: [{
     applicationId: {
       type: String,
       required: true,
       unique: true
     },
+    loanType: {
+      type: String,
+      enum: ['Personal', 'Home', 'Car', 'Education', 'Business'],
+      default: 'Personal',
+      required: true
+    },
     loanAmount: {
       type: Number,
       required: true,
       min: 1000
+    },
+    approvedAmount: {
+      type: Number,
+      default: 0
+    },
+    interestRate: {
+      type: Number,
+      required: true,
+      min: 0
+    },
+    tenure: {
+      type: Number,
+      required: true,
+      min: 6,
+      max: 360 // months (30 years max)
+    },
+    emi: {
+      type: Number,
+      default: 0
+    },
+    emiStartDate: {
+      type: Date,
+      default: null
     },
     status: {
       type: String,
@@ -122,16 +150,12 @@ const userSchema = new mongoose.Schema({
       min: 0,
       max: 100
     },
-    approvedAmount: Number,
-    interestRate: Number,
     appliedAt: {
       type: Date,
       default: Date.now
     },
-    processedAt: Date,
-    phoneDataUsed: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'PhoneData' // Optional separate collection
+    processedAt: {
+      type: Date
     }
   }],
 
@@ -153,7 +177,6 @@ const userSchema = new mongoose.Schema({
     required: true
   },
 
-  // Timestamps
   createdAt: {
     type: Date,
     default: Date.now
@@ -166,14 +189,11 @@ const userSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Password hashing & comparison
+// Password hashing
 userSchema.pre('save', async function(next) {
   if (!this.isModified('passwordHash')) return next();
   
-  this.passwordHash = await bcrypt.hash(
-    this.passwordHash, 
-    10 // config.security.bcryptRounds later
-  );
+  this.passwordHash = await bcrypt.hash(this.passwordHash, 10);
   next();
 });
 
