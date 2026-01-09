@@ -1,0 +1,145 @@
+{
+  "userId": "user_001",
+  "installedApps": [
+    {
+      "appName": "HDFC Bank",
+      "packageName": "com.hdfc.bankapp",
+      "category": "BANKING",
+      "installDate": "2023-06-15",
+      "lastUpdate": "2024-01-05",
+      "isFinancial": true
+    },
+    {
+      "appName": "Google Pay",
+      "packageName": "com.google.pay",
+      "category": "PAYMENT",
+      "installDate": "2022-03-20",
+      "lastUpdate": "2024-01-04",
+      "isFinancial": true
+    },
+    {
+      "appName": "Paytm",
+      "packageName": "com.paytm",
+      "category": "PAYMENT",
+      "installDate": "2021-05-10",
+      "lastUpdate": "2024-01-03",
+      "isFinancial": true
+    },
+    {
+      "appName": "Amazon",
+      "packageName": "com.amazon.mShop.android",
+      "category": "ECOMMERCE",
+      "installDate": "2023-08-20",
+      "lastUpdate": "2024-01-06",
+      "isFinancial": false
+    },
+    {
+      "appName": "Flipkart",
+      "packageName": "com.flipkart.android",
+      "category": "ECOMMERCE",
+      "installDate": "2023-09-12",
+      "lastUpdate": "2024-01-05",
+      "isFinancial": false
+    },
+    {
+      "appName": "LinkedIn",
+      "packageName": "com.linkedin.android",
+      "category": "PROFESSIONAL",
+      "installDate": "2023-01-01",
+      "lastUpdate": "2024-01-02",
+      "isFinancial": false
+    },
+    {
+      "appName": "Duolingo",
+      "packageName": "com.duolingo",
+      "category": "LEARNING",
+      "installDate": "2023-11-10",
+      "lastUpdate": "2024-01-07",
+      "isFinancial": false
+    },
+    {
+      "appName": "YouTube",
+      "packageName": "com.google.android.youtube",
+      "category": "ENTERTAINMENT",
+      "installDate": "2022-01-01",
+      "lastUpdate": "2024-01-07",
+      "isFinancial": false
+    },
+    {
+      "appName": "Gmail",
+      "packageName": "com.google.android.gm",
+      "category": "COMMUNICATION",
+      "installDate": "2020-12-01",
+      "lastUpdate": "2024-01-06",
+      "isFinancial": false
+    },
+    {
+      "appName": "Chrome",
+      "packageName": "com.android.chrome",
+      "category": "BROWSER",
+      "installDate": "2020-01-01",
+      "lastUpdate": "2024-01-07",
+      "isFinancial": false
+    },
+    {
+      "appName": "WhatsApp",
+      "packageName": "com.whatsapp",
+      "category": "MESSAGING",
+      "installDate": "2020-05-01",
+      "lastUpdate": "2024-01-05",
+      "isFinancial": false
+    },
+    {
+      "appName": "Instagram",
+      "packageName": "com.instagram.android",
+      "category": "SOCIAL",
+      "installDate": "2020-06-15",
+      "lastUpdate": "2024-01-07",
+      "isFinancial": false
+    },
+    {
+      "appName": "Spotify",
+      "packageName": "com.spotify.music",
+      "category": "ENTERTAINMENT",
+      "installDate": "2023-03-20",
+      "lastUpdate": "2024-01-06",
+      "isFinancial": false
+    },
+    {
+      "appName": "Google Maps",
+      "packageName": "com.google.android.apps.maps",
+      "category": "NAVIGATION",
+      "installDate": "2021-02-10",
+      "lastUpdate": "2024-01-07",
+      "isFinancial": false
+    },
+    {
+      "appName": "Calculator",
+      "packageName": "com.android.calculator2",
+      "category": "UTILITIES",
+      "installDate": "2020-01-01",
+      "lastUpdate": "2024-01-01",
+      "isFinancial": false
+    }
+  ],
+  "stats": {
+    "totalApps": 15,
+    "bankingApps": ["HDFC Bank"],
+    "bankingAppCount": 1,
+    "paymentApps": ["Google Pay", "Paytm"],
+    "paymentAppCount": 2,
+    "financialAppCount": 3,
+    "professionalApps": ["LinkedIn"],
+    "professionalAppCount": 1,
+    "educationalApps": ["Duolingo"],
+    "educationalAppCount": 1,
+    "ecommerceApps": ["Amazon", "Flipkart"],
+    "ecommerceAppCount": 2,
+    "hasLoanApps": false,
+    "loanAppCount": 0,
+    "entertaintmentApps": 2,
+    "recentlyUpdatedApps": 8,
+    "oldAppsNotUpdated": 2,
+    "appLiteracyLevel": "HIGH"
+  }
+}

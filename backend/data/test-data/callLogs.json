@@ -1,0 +1,311 @@
+{
+  "userId": "user_001",
+  "callLogs": [
+    {
+      "contactName": "Mom",
+      "phoneNumber": "+91-98765-43210",
+      "callDuration": 300,
+      "callType": "INCOMING",
+      "timestamp": "2024-01-07T14:30:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Boss",
+      "phoneNumber": "+91-87654-32109",
+      "callDuration": 1200,
+      "callType": "OUTGOING",
+      "timestamp": "2024-01-07T10:00:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Rahul",
+      "phoneNumber": "+91-76543-21098",
+      "callDuration": 450,
+      "callType": "INCOMING",
+      "timestamp": "2024-01-07T18:45:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Sister",
+      "phoneNumber": "+91-65432-10987",
+      "callDuration": 600,
+      "callType": "OUTGOING",
+      "timestamp": "2024-01-06T19:20:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "HR Manager",
+      "phoneNumber": "+91-54321-09876",
+      "callDuration": 300,
+      "callType": "INCOMING",
+      "timestamp": "2024-01-06T09:15:00Z",
+      "isFrequentContact": false
+    },
+    {
+      "contactName": "Mom",
+      "phoneNumber": "+91-98765-43210",
+      "callDuration": 250,
+      "callType": "OUTGOING",
+      "timestamp": "2024-01-05T20:00:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Friend - Priya",
+      "phoneNumber": "+91-43210-98765",
+      "callDuration": 900,
+      "callType": "OUTGOING",
+      "timestamp": "2024-01-05T17:30:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Rahul",
+      "phoneNumber": "+91-76543-21098",
+      "callDuration": 600,
+      "callType": "OUTGOING",
+      "timestamp": "2024-01-04T15:45:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Boss",
+      "phoneNumber": "+91-87654-32109",
+      "callDuration": 1500,
+      "callType": "INCOMING",
+      "timestamp": "2024-01-04T10:30:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Electricity Board",
+      "phoneNumber": "+91-1800-111-222",
+      "callDuration": 180,
+      "callType": "INCOMING",
+      "timestamp": "2024-01-03T11:00:00Z",
+      "isFrequentContact": false
+    },
+    {
+      "contactName": "Mom",
+      "phoneNumber": "+91-98765-43210",
+      "callDuration": 420,
+      "callType": "INCOMING",
+      "timestamp": "2024-01-02T18:00:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Colleague - Dev",
+      "phoneNumber": "+91-32109-87654",
+      "callDuration": 300,
+      "callType": "OUTGOING",
+      "timestamp": "2024-01-01T14:20:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Boss",
+      "phoneNumber": "+91-87654-32109",
+      "callDuration": 900,
+      "callType": "OUTGOING",
+      "timestamp": "2023-12-31T11:00:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Friend - Priya",
+      "phoneNumber": "+91-43210-98765",
+      "callDuration": 1200,
+      "callType": "INCOMING",
+      "timestamp": "2023-12-30T19:30:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Rahul",
+      "phoneNumber": "+91-76543-21098",
+      "callDuration": 720,
+      "callType": "OUTGOING",
+      "timestamp": "2023-12-29T16:00:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Mom",
+      "phoneNumber": "+91-98765-43210",
+      "callDuration": 480,
+      "callType": "INCOMING",
+      "timestamp": "2023-12-28T17:45:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Sister",
+      "phoneNumber": "+91-65432-10987",
+      "callDuration": 540,
+      "callType": "INCOMING",
+      "timestamp": "2023-12-27T20:15:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Boss",
+      "phoneNumber": "+91-87654-32109",
+      "callDuration": 1100,
+      "callType": "INCOMING",
+      "timestamp": "2023-12-26T09:30:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Colleague - Dev",
+      "phoneNumber": "+91-32109-87654",
+      "callDuration": 420,
+      "callType": "OUTGOING",
+      "timestamp": "2023-12-25T14:00:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Friend - Priya",
+      "phoneNumber": "+91-43210-98765",
+      "callDuration": 600,
+      "callType": "OUTGOING",
+      "timestamp": "2023-12-24T18:20:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Mom",
+      "phoneNumber": "+91-98765-43210",
+      "callDuration": 360,
+      "callType": "OUTGOING",
+      "timestamp": "2023-12-23T19:00:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Rahul",
+      "phoneNumber": "+91-76543-21098",
+      "callDuration": 480,
+      "callType": "INCOMING",
+      "timestamp": "2023-12-22T15:30:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Boss",
+      "phoneNumber": "+91-87654-32109",
+      "callDuration": 1300,
+      "callType": "OUTGOING",
+      "timestamp": "2023-12-21T10:15:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Sister",
+      "phoneNumber": "+91-65432-10987",
+      "callDuration": 720,
+      "callType": "OUTGOING",
+      "timestamp": "2023-12-20T17:45:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Mom",
+      "phoneNumber": "+91-98765-43210",
+      "callDuration": 540,
+      "callType": "INCOMING",
+      "timestamp": "2023-12-19T18:30:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Friend - Priya",
+      "phoneNumber": "+91-43210-98765",
+      "callDuration": 900,
+      "callType": "INCOMING",
+      "timestamp": "2023-12-18T20:00:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Colleague - Dev",
+      "phoneNumber": "+91-32109-87654",
+      "callDuration": 360,
+      "callType": "OUTGOING",
+      "timestamp": "2023-12-17T14:20:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Rahul",
+      "phoneNumber": "+91-76543-21098",
+      "callDuration": 600,
+      "callType": "OUTGOING",
+      "timestamp": "2023-12-16T16:30:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Boss",
+      "phoneNumber": "+91-87654-32109",
+      "callDuration": 1400,
+      "callType": "INCOMING",
+      "timestamp": "2023-12-15T09:00:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Mom",
+      "phoneNumber": "+91-98765-43210",
+      "callDuration": 480,
+      "callType": "OUTGOING",
+      "timestamp": "2023-12-14T19:15:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Sister",
+      "phoneNumber": "+91-65432-10987",
+      "callDuration": 660,
+      "callType": "INCOMING",
+      "timestamp": "2023-12-13T20:45:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Friend - Priya",
+      "phoneNumber": "+91-43210-98765",
+      "callDuration": 750,
+      "callType": "OUTGOING",
+      "timestamp": "2023-12-12T18:00:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Rahul",
+      "phoneNumber": "+91-76543-21098",
+      "callDuration": 540,
+      "callType": "INCOMING",
+      "timestamp": "2023-12-11T17:20:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Boss",
+      "phoneNumber": "+91-87654-32109",
+      "callDuration": 1150,
+      "callType": "OUTGOING",
+      "timestamp": "2023-12-10T11:30:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Mom",
+      "phoneNumber": "+91-98765-43210",
+      "callDuration": 420,
+      "callType": "INCOMING",
+      "timestamp": "2023-12-09T18:45:00Z",
+      "isFrequentContact": true
+    },
+    {
+      "contactName": "Colleague - Dev",
+      "phoneNumber": "+91-32109-87654",
+      "callDuration": 380,
+      "callType": "OUTGOING",
+      "timestamp": "2023-12-08T15:00:00Z",
+      "isFrequentContact": true
+    }
+  ],
+  "stats": {
+    "totalCalls": 35,
+    "daysTracked": 30,
+    "callsPerDay": 1.17,
+    "callsPerWeek": 8.75,
+    "uniqueContacts": 8,
+    "frequentContacts": 7,
+    "averageCallDuration": 683,
+    "incomingCalls": 15,
+    "outgoingCalls": 20,
+    "incomingPercentage": 42.9,
+    "outgoingPercentage": 57.1,
+    "longestCallDuration": 1500,
+    "shortestCallDuration": 180,
+    "timeRange": "2023-12-08 to 2024-01-07",
+    "callConsistency": "HIGH",
+    "communicationPattern": "STABLE"
+  }
+}

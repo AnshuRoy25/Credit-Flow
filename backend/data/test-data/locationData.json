@@ -1,0 +1,278 @@
+{
+  "userId": "user_001",
+  "locationData": [
+    {
+      "latitude": 29.5673,
+      "longitude": 77.2897,
+      "accuracy": 30,
+      "timestamp": "2024-01-07T08:00:00Z",
+      "locationName": "Home - Narnaund, Haryana",
+      "placeType": "RESIDENCE"
+    },
+    {
+      "latitude": 29.5680,
+      "longitude": 77.2920,
+      "accuracy": 40,
+      "timestamp": "2024-01-07T09:00:00Z",
+      "locationName": "Office - ABC Pvt Ltd, Narnaund",
+      "placeType": "WORK"
+    },
+    {
+      "latitude": 29.5674,
+      "longitude": 77.2898,
+      "accuracy": 35,
+      "timestamp": "2024-01-07T18:00:00Z",
+      "locationName": "Home - Narnaund, Haryana",
+      "placeType": "RESIDENCE"
+    },
+    {
+      "latitude": 29.5700,
+      "longitude": 77.2850,
+      "accuracy": 60,
+      "timestamp": "2024-01-06T16:30:00Z",
+      "locationName": "Market - Shopping Complex",
+      "placeType": "SHOPPING"
+    },
+    {
+      "latitude": 29.5673,
+      "longitude": 77.2897,
+      "accuracy": 25,
+      "timestamp": "2024-01-06T20:00:00Z",
+      "locationName": "Home - Narnaund, Haryana",
+      "placeType": "RESIDENCE"
+    },
+    {
+      "latitude": 29.5680,
+      "longitude": 77.2920,
+      "accuracy": 45,
+      "timestamp": "2024-01-06T09:15:00Z",
+      "locationName": "Office - ABC Pvt Ltd, Narnaund",
+      "placeType": "WORK"
+    },
+    {
+      "latitude": 29.5673,
+      "longitude": 77.2897,
+      "accuracy": 28,
+      "timestamp": "2024-01-05T19:30:00Z",
+      "locationName": "Home - Narnaund, Haryana",
+      "placeType": "RESIDENCE"
+    },
+    {
+      "latitude": 29.5680,
+      "longitude": 77.2920,
+      "accuracy": 50,
+      "timestamp": "2024-01-05T08:45:00Z",
+      "locationName": "Office - ABC Pvt Ltd, Narnaund",
+      "placeType": "WORK"
+    },
+    {
+      "latitude": 29.5750,
+      "longitude": 77.3050,
+      "accuracy": 100,
+      "timestamp": "2024-01-04T14:20:00Z",
+      "locationName": "Hospital - Medical Center",
+      "placeType": "HEALTHCARE"
+    },
+    {
+      "latitude": 29.5673,
+      "longitude": 77.2897,
+      "accuracy": 32,
+      "timestamp": "2024-01-04T20:00:00Z",
+      "locationName": "Home - Narnaund, Haryana",
+      "placeType": "RESIDENCE"
+    },
+    {
+      "latitude": 29.5680,
+      "longitude": 77.2920,
+      "accuracy": 35,
+      "timestamp": "2024-01-03T09:30:00Z",
+      "locationName": "Office - ABC Pvt Ltd, Narnaund",
+      "placeType": "WORK"
+    },
+    {
+      "latitude": 29.5673,
+      "longitude": 77.2897,
+      "accuracy": 25,
+      "timestamp": "2024-01-02T21:00:00Z",
+      "locationName": "Home - Narnaund, Haryana",
+      "placeType": "RESIDENCE"
+    },
+    {
+      "latitude": 29.5680,
+      "longitude": 77.2920,
+      "accuracy": 40,
+      "timestamp": "2024-01-01T08:00:00Z",
+      "locationName": "Office - ABC Pvt Ltd, Narnaund",
+      "placeType": "WORK"
+    },
+    {
+      "latitude": 29.5673,
+      "longitude": 77.2897,
+      "accuracy": 28,
+      "timestamp": "2023-12-31T19:00:00Z",
+      "locationName": "Home - Narnaund, Haryana",
+      "placeType": "RESIDENCE"
+    },
+    {
+      "latitude": 29.5680,
+      "longitude": 77.2920,
+      "accuracy": 45,
+      "timestamp": "2023-12-30T09:00:00Z",
+      "locationName": "Office - ABC Pvt Ltd, Narnaund",
+      "placeType": "WORK"
+    },
+    {
+      "latitude": 29.5673,
+      "longitude": 77.2897,
+      "accuracy": 30,
+      "timestamp": "2023-12-29T20:15:00Z",
+      "locationName": "Home - Narnaund, Haryana",
+      "placeType": "RESIDENCE"
+    },
+    {
+      "latitude": 29.5700,
+      "longitude": 77.2850,
+      "accuracy": 55,
+      "timestamp": "2023-12-28T17:30:00Z",
+      "locationName": "Market - Shopping Complex",
+      "placeType": "SHOPPING"
+    },
+    {
+      "latitude": 29.5680,
+      "longitude": 77.2920,
+      "accuracy": 42,
+      "timestamp": "2023-12-27T09:20:00Z",
+      "locationName": "Office - ABC Pvt Ltd, Narnaund",
+      "placeType": "WORK"
+    },
+    {
+      "latitude": 29.5673,
+      "longitude": 77.2897,
+      "accuracy": 28,
+      "timestamp": "2023-12-26T18:45:00Z",
+      "locationName": "Home - Narnaund, Haryana",
+      "placeType": "RESIDENCE"
+    },
+    {
+      "latitude": 29.5680,
+      "longitude": 77.2920,
+      "accuracy": 38,
+      "timestamp": "2023-12-25T09:00:00Z",
+      "locationName": "Office - ABC Pvt Ltd, Narnaund",
+      "placeType": "WORK"
+    },
+    {
+      "latitude": 29.5750,
+      "longitude": 77.3050,
+      "accuracy": 80,
+      "timestamp": "2023-12-24T15:45:00Z",
+      "locationName": "Hospital - Medical Center",
+      "placeType": "HEALTHCARE"
+    },
+    {
+      "latitude": 29.5673,
+      "longitude": 77.2897,
+      "accuracy": 26,
+      "timestamp": "2023-12-23T19:30:00Z",
+      "locationName": "Home - Narnaund, Haryana",
+      "placeType": "RESIDENCE"
+    },
+    {
+      "latitude": 29.5680,
+      "longitude": 77.2920,
+      "accuracy": 44,
+      "timestamp": "2023-12-22T08:30:00Z",
+      "locationName": "Office - ABC Pvt Ltd, Narnaund",
+      "placeType": "WORK"
+    },
+    {
+      "latitude": 29.5673,
+      "longitude": 77.2897,
+      "accuracy": 29,
+      "timestamp": "2023-12-21T20:00:00Z",
+      "locationName": "Home - Narnaund, Haryana",
+      "placeType": "RESIDENCE"
+    },
+    {
+      "latitude": 29.5680,
+      "longitude": 77.2920,
+      "accuracy": 40,
+      "timestamp": "2023-12-20T09:15:00Z",
+      "locationName": "Office - ABC Pvt Ltd, Narnaund",
+      "placeType": "WORK"
+    },
+    {
+      "latitude": 29.5710,
+      "longitude": 77.2880,
+      "accuracy": 75,
+      "timestamp": "2023-12-19T16:20:00Z",
+      "locationName": "Restaurant - Dining Area",
+      "placeType": "RECREATION"
+    },
+    {
+      "latitude": 29.5673,
+      "longitude": 77.2897,
+      "accuracy": 27,
+      "timestamp": "2023-12-18T19:45:00Z",
+      "locationName": "Home - Narnaund, Haryana",
+      "placeType": "RESIDENCE"
+    },
+    {
+      "latitude": 29.5680,
+      "longitude": 77.2920,
+      "accuracy": 46,
+      "timestamp": "2023-12-17T08:45:00Z",
+      "locationName": "Office - ABC Pvt Ltd, Narnaund",
+      "placeType": "WORK"
+    },
+    {
+      "latitude": 29.5673,
+      "longitude": 77.2897,
+      "accuracy": 31,
+      "timestamp": "2023-12-16T20:30:00Z",
+      "locationName": "Home - Narnaund, Haryana",
+      "placeType": "RESIDENCE"
+    },
+    {
+      "latitude": 29.5680,
+      "longitude": 77.2920,
+      "accuracy": 42,
+      "timestamp": "2023-12-15T09:00:00Z",
+      "locationName": "Office - ABC Pvt Ltd, Narnaund",
+      "placeType": "WORK"
+    },
+    {
+      "latitude": 29.5673,
+      "longitude": 77.2897,
+      "accuracy": 28,
+      "timestamp": "2023-12-14T18:00:00Z",
+      "locationName": "Home - Narnaund, Haryana",
+      "placeType": "RESIDENCE"
+    }
+  ],
+  "stats": {
+    "daysTracked": 30,
+    "monthsAtCurrentAddress": 18,
+    "currentAddressCoordinates": {
+      "latitude": 29.5673,
+      "longitude": 77.2897
+    },
+    "homeLocation": "Narnaund, Haryana",
+    "workLocation": "ABC Pvt Ltd, Narnaund",
+    "movementRadius": 3.5,
+    "movementRadiusUnit": "km",
+    "hasFixedOffice": true,
+    "daysWithWorkCommute": 22,
+    "workCommuteDaysOut30": 22,
+    "dailyCommuteConsistency": 0.95,
+    "addressChanges_1year": 0,
+    "addressChanges_6months": 0,
+    "allLocationsInSingleCity": true,
+    "cityName": "Narnaund",
+    "stateName": "Haryana",
+    "uniqueLocations": 6,
+    "frequentLocations": ["Home - 22 times", "Office - 22 times", "Market - 2 times", "Hospital - 2 times", "Restaurant - 1 time"],
+    "stabilityLevel": "VERY_HIGH",
+    "homeResidenceConsistency": 0.97
+  }
+}

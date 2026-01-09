@@ -1,0 +1,291 @@
+{
+  "userId": "user_001",
+  "smsData": [
+    {
+      "sender": "HDFC Bank",
+      "message": "Your account XXXX1234 debited with ₹5000. Balance: ₹15000. Ref: TXN123456",
+      "timestamp": "2024-01-07T10:30:00Z",
+      "category": "BANKING",
+      "isFinancial": true
+    },
+    {
+      "sender": "PhonePe",
+      "message": "Payment of ₹2000 sent to Rahul. Ref: PHE123456. Available Balance: ₹8000",
+      "timestamp": "2024-01-07T11:00:00Z",
+      "category": "PAYMENT",
+      "isFinancial": true
+    },
+    {
+      "sender": "Amazon",
+      "message": "Your order #123456 has been delivered. Thank you for shopping!",
+      "timestamp": "2024-01-06T15:20:00Z",
+      "category": "ECOMMERCE",
+      "isFinancial": false
+    },
+    {
+      "sender": "Haryana Electricity Board",
+      "message": "Your bill of ₹2500 is due by Jan 15. Pay now to avoid late charges.",
+      "timestamp": "2024-01-05T09:00:00Z",
+      "category": "BILLS",
+      "isFinancial": true
+    },
+    {
+      "sender": "HDFC Bank",
+      "message": "Congratulations! Your salary of ₹25,000 has been credited. Balance: ₹20000",
+      "timestamp": "2024-01-05T08:00:00Z",
+      "category": "BANKING",
+      "isFinancial": true
+    },
+    {
+      "sender": "Google Pay",
+      "message": "You paid ₹3500 to ABC Pvt Ltd. Ref: GPE654321",
+      "timestamp": "2024-01-04T18:45:00Z",
+      "category": "PAYMENT",
+      "isFinancial": true
+    },
+    {
+      "sender": "Paytm",
+      "message": "Bill Payment: ₹1500 for Mobile (Airtel). Ref: PTM987654",
+      "timestamp": "2024-01-04T16:30:00Z",
+      "category": "BILLS",
+      "isFinancial": true
+    },
+    {
+      "sender": "LinkedIn",
+      "message": "Profile tip: Add a professional photo to increase profile views by 14x",
+      "timestamp": "2024-01-04T12:00:00Z",
+      "category": "PROFESSIONAL",
+      "isFinancial": false
+    },
+    {
+      "sender": "HDFC Bank",
+      "message": "Your account XXXX1234 debited with ₹800. Balance: ₹19200. Ref: TXN654321",
+      "timestamp": "2024-01-03T14:15:00Z",
+      "category": "BANKING",
+      "isFinancial": true
+    },
+    {
+      "sender": "Flipkart",
+      "message": "Special offer: Get 30% off on gadgets. Valid till today!",
+      "timestamp": "2024-01-03T10:00:00Z",
+      "category": "ECOMMERCE",
+      "isFinancial": false
+    },
+    {
+      "sender": "HDFC Bank",
+      "message": "Your account XXXX1234 debited with ₹2000. Balance: ₹21200. Ref: TXN321654",
+      "timestamp": "2024-01-02T19:30:00Z",
+      "category": "BANKING",
+      "isFinancial": true
+    },
+    {
+      "sender": "Duolingo",
+      "message": "You're on a 15-day streak! Keep learning Spanish today.",
+      "timestamp": "2024-01-02T08:00:00Z",
+      "category": "LEARNING",
+      "isFinancial": false
+    },
+    {
+      "sender": "HDFC Bank",
+      "message": "Your account XXXX1234 credited with ₹100 cashback. Balance: ₹23200",
+      "timestamp": "2024-01-01T15:45:00Z",
+      "category": "BANKING",
+      "isFinancial": true
+    },
+    {
+      "sender": "Google",
+      "message": "Sign-in attempt blocked. If this wasn't you, secure your account now.",
+      "timestamp": "2024-01-01T09:00:00Z",
+      "category": "SECURITY",
+      "isFinancial": false
+    },
+    {
+      "sender": "HDFC Bank",
+      "message": "Your account XXXX1234 debited with ₹1200. Balance: ₹22000. Ref: TXN456789",
+      "timestamp": "2023-12-31T12:30:00Z",
+      "category": "BANKING",
+      "isFinancial": true
+    },
+    {
+      "sender": "Paytm",
+      "message": "Bill Payment: ₹2000 for Electricity. Ref: PTM567890",
+      "timestamp": "2023-12-30T10:15:00Z",
+      "category": "BILLS",
+      "isFinancial": true
+    },
+    {
+      "sender": "PhonePe",
+      "message": "Payment of ₹1500 sent to Priya. Ref: PHE567890",
+      "timestamp": "2023-12-29T17:45:00Z",
+      "category": "PAYMENT",
+      "isFinancial": true
+    },
+    {
+      "sender": "Amazon",
+      "message": "Your order #654321 has been shipped. Track here!",
+      "timestamp": "2023-12-28T14:20:00Z",
+      "category": "ECOMMERCE",
+      "isFinancial": false
+    },
+    {
+      "sender": "HDFC Bank",
+      "message": "Your account XXXX1234 debited with ₹3500. Balance: ₹18500. Ref: TXN789012",
+      "timestamp": "2023-12-27T19:00:00Z",
+      "category": "BANKING",
+      "isFinancial": true
+    },
+    {
+      "sender": "Google Pay",
+      "message": "You paid ₹2500 to Electricity Board. Ref: GPE789012",
+      "timestamp": "2023-12-26T11:30:00Z",
+      "category": "PAYMENT",
+      "isFinancial": true
+    },
+    {
+      "sender": "Flipkart",
+      "message": "Flash sale: Electronics at 50% off. Shop now!",
+      "timestamp": "2023-12-25T09:00:00Z",
+      "category": "ECOMMERCE",
+      "isFinancial": false
+    },
+    {
+      "sender": "HDFC Bank",
+      "message": "Your account XXXX1234 credited with ₹500 cashback. Balance: ₹19000",
+      "timestamp": "2023-12-24T16:45:00Z",
+      "category": "BANKING",
+      "isFinancial": true
+    },
+    {
+      "sender": "Duolingo",
+      "message": "You're on a 10-day streak! You're doing amazing!",
+      "timestamp": "2023-12-23T08:00:00Z",
+      "category": "LEARNING",
+      "isFinancial": false
+    },
+    {
+      "sender": "LinkedIn",
+      "message": "Your profile was viewed by a hiring manager!",
+      "timestamp": "2023-12-22T15:30:00Z",
+      "category": "PROFESSIONAL",
+      "isFinancial": false
+    },
+    {
+      "sender": "HDFC Bank",
+      "message": "Your account XXXX1234 debited with ₹4000. Balance: ₹15000. Ref: TXN012345",
+      "timestamp": "2023-12-21T13:15:00Z",
+      "category": "BANKING",
+      "isFinancial": true
+    },
+    {
+      "sender": "Paytm",
+      "message": "Bill Payment: ₹1500 for Mobile (Airtel). Ref: PTM012345",
+      "timestamp": "2023-12-20T14:45:00Z",
+      "category": "BILLS",
+      "isFinancial": true
+    },
+    {
+      "sender": "PhonePe",
+      "message": "Payment of ₹2500 sent to Rahul. Ref: PHE012345",
+      "timestamp": "2023-12-19T18:20:00Z",
+      "category": "PAYMENT",
+      "isFinancial": true
+    },
+    {
+      "sender": "HDFC Bank",
+      "message": "Your account XXXX1234 credited with ₹250 cashback. Balance: ₹17750",
+      "timestamp": "2023-12-18T12:00:00Z",
+      "category": "BANKING",
+      "isFinancial": true
+    },
+    {
+      "sender": "Amazon",
+      "message": "Your return has been processed. Refund initiated!",
+      "timestamp": "2023-12-17T10:30:00Z",
+      "category": "ECOMMERCE",
+      "isFinancial": false
+    },
+    {
+      "sender": "Google Pay",
+      "message": "You paid ₹1800 to ABC Company. Ref: GPE345678",
+      "timestamp": "2023-12-16T15:45:00Z",
+      "category": "PAYMENT",
+      "isFinancial": true
+    },
+    {
+      "sender": "HDFC Bank",
+      "message": "Your account XXXX1234 debited with ₹1500. Balance: ₹16250. Ref: TXN345678",
+      "timestamp": "2023-12-15T09:20:00Z",
+      "category": "BANKING",
+      "isFinancial": true
+    },
+    {
+      "sender": "LinkedIn",
+      "message": "You have a new job recommendation. Check it out!",
+      "timestamp": "2023-12-14T14:00:00Z",
+      "category": "PROFESSIONAL",
+      "isFinancial": false
+    },
+    {
+      "sender": "Paytm",
+      "message": "Bill Payment: ₹2500 for Electricity. Ref: PTM345678",
+      "timestamp": "2023-12-13T11:15:00Z",
+      "category": "BILLS",
+      "isFinancial": true
+    },
+    {
+      "sender": "HDFC Bank",
+      "message": "Your account XXXX1234 credited with ₹100 cashback. Balance: ₹16350",
+      "timestamp": "2023-12-12T16:30:00Z",
+      "category": "BANKING",
+      "isFinancial": true
+    },
+    {
+      "sender": "Duolingo",
+      "message": "Welcome back! You're on a 5-day streak!",
+      "timestamp": "2023-12-11T08:00:00Z",
+      "category": "LEARNING",
+      "isFinancial": false
+    },
+    {
+      "sender": "PhonePe",
+      "message": "Payment of ₹3000 sent to Sister. Ref: PHE678901",
+      "timestamp": "2023-12-10T19:45:00Z",
+      "category": "PAYMENT",
+      "isFinancial": true
+    },
+    {
+      "sender": "HDFC Bank",
+      "message": "Your account XXXX1234 debited with ₹2200. Balance: ₹14150. Ref: TXN678901",
+      "timestamp": "2023-12-09T10:30:00Z",
+      "category": "BANKING",
+      "isFinancial": true
+    },
+    {
+      "sender": "Google Pay",
+      "message": "You paid ₹1200 to Utility Company. Ref: GPE901234",
+      "timestamp": "2023-12-08T12:00:00Z",
+      "category": "PAYMENT",
+      "isFinancial": true
+    }
+  ],
+  "stats": {
+    "totalSMS": 37,
+    "daysTracked": 30,
+    "bankingSMS": 14,
+    "paymentSMS": 8,
+    "billsSMS": 6,
+    "ecommerceSMS": 5,
+    "professionalSMS": 2,
+    "learningSMS": 2,
+    "securitySMS": 1,
+    "financialSMS": 28,
+    "bankingSMSPerMonth": 56,
+    "paymentAppSMS": 8,
+    "billPaymentConsistency": "VERY_HIGH",
+    "debtCollectionSMS": 0,
+    "totalFinancialTransactions": 28,
+    "averageTransactionValue": 2089,
+    "transactionPattern": "CONSISTENT",
+    "financialLiteracy": "HIGH"
+  }
+}
