@@ -8,7 +8,7 @@ const verifyToken = (req, res, next) => {
     if (!token) return res.status(403).json({error: "no token provided"});
 
     try {
-        const payload = jwt.verify(token, config.jwtSecretkey);
+        const payload = jwt.verify(token, config.jwtSecret); 
         req.user = { 
             id: payload.userId, 
             username: payload.username
