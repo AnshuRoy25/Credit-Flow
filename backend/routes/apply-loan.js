@@ -96,7 +96,7 @@ router.post("/apply-loan", verifyToken, async (req, res) => {
     }
 
     // Determine approval
-    const isApproved = creditScore >= 80;
+    const isApproved = creditScore >= 60;
     const status = isApproved ? "APPROVED" : "DECLINED";
     
     // Calculate interest rate
