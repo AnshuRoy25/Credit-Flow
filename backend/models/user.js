@@ -190,11 +190,10 @@ const userSchema = new mongoose.Schema({
 });
 
 // Password hashing
-userSchema.pre('save', async function(next) {
-  if (!this.isModified('passwordHash')) return next();
+userSchema.pre('save', async function() {
+  if (!this.isModified('passwordHash')) return;
   
   this.passwordHash = await bcrypt.hash(this.passwordHash, 10);
-  next();
 });
 
 userSchema.methods.comparePassword = async function(password) {
