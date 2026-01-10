@@ -1,13 +1,15 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "CreditFlow Backend API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "node index.js",
+    "seed": "node seed-demo-user.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["creditflow", "loan", "backend"],
+  "author": "CreditFlow Team",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -17,5 +19,8 @@
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.1.2"
   },
-  "type": "module"
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }

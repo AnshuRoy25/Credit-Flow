@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: creditflow-backend
+    runtime: node
+    region: singapore  # or choose your preferred region
+    plan: free  # Change to 'starter' for paid plan
+    branch: main  # or your default branch name
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false  # You'll add this manually in Render dashboard
+      - key: JWT_SECRET
+        sync: false  # You'll add this manually in Render dashboard
+      - key: frontendURL
+        value: https://credit-flow-mvp.vercel.app
+      - key: PORT
+        value: 5999
+    autoDeploy: true
