@@ -10,8 +10,8 @@ import AppLayout from "./AppLayout.jsx";
 import HomePage from "./Pages/Home";
 
 // Auth pages
-import LoginPage from "./Pages/LoginPage.jsx";
-import RegisterPage from "./Pages/RegisterPage.jsx";
+import LoginPage from "./Pages/Loginpage.jsx";
+import RegisterPage from "./Pages/Registerpage.jsx";
 
 // Loan application pages
 import LoanTypesPage from "./Pages/LoanTypesPage.jsx";
