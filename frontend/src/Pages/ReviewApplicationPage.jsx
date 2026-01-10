@@ -21,6 +21,8 @@ const ReviewApplicationPage = () => {
     loanAmount: 20000,
     tenure: 6,
   });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const savedData = sessionStorage.getItem('loanFormData');
@@ -49,8 +51,69 @@ const ReviewApplicationPage = () => {
     navigate('/emi-start-date');
   };
 
-  const handleSubmit = () => {
-    navigate('/processing', { state: { formData } });
+  const handleSubmit = async () => {
+    setLoading(true);
+    setError('');
+
+    try {
+      // Get token from localStorage
+      const token = localStorage.getItem('token');
+      
+      if (!token) {
+        setError('Please login to apply for a loan');
+        navigate('/login');
+        return;
+      }
+
+      // Prepare loan application data according to backend API
+      const loanApplicationData = {
+        loanAmount: Number(formData.loanAmount),
+        tenure: Number(formData.tenure),
+        loanType: 'Personal',
+        emiStartDate: '2025-03-24', // Fixed date as shown in UI
+        
+        // Employment Details (required by backend)
+        employmentType: formData.employmentType,
+        companyName: 'N/A', // Optional
+        designation: 'N/A', // Optional
+        monthlyIncome: 50000, // You can add this to the form if needed
+        workExperienceYears: 2, // You can add this to the form if needed
+        
+        // Bank Details (required by backend)
+        accountNumber: formData.bankAccount,
+        bankName: formData.bankName,
+        ifscCode: formData.ifsc,
+      };
+
+      // Make API request to backend
+      const response = await fetch('http://localhost:5999/api/loan/apply-loan', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(loanApplicationData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Store the application result
+        sessionStorage.setItem('loanResult', JSON.stringify(data));
+        
+        // Navigate to processing page
+        navigate('/processing', { state: { result: data } });
+      } else {
+        setError(data.error || 'Failed to submit loan application');
+        window.alert(data.error || 'Failed to submit loan application. Please try again.');
+      }
+    } catch (err) {
+      console.error('Submit error:', err);
+      setError('Unable to connect to server. Please try again later.');
+      window.alert('Unable to connect to server. Please make sure the backend is running on port 5999.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const emi = calculateEMI();
@@ -139,6 +202,17 @@ const ReviewApplicationPage = () => {
           word-break: break-word;
         }
 
+        .error-message {
+          background: rgba(231, 76, 60, 0.1);
+          border: 1px solid #e74c3c;
+          color: #e74c3c;
+          padding: 12px;
+          border-radius: 8px;
+          margin-bottom: 16px;
+          font-size: 14px;
+          text-align: center;
+        }
+
         .nav-buttons {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -160,6 +234,12 @@ const ReviewApplicationPage = () => {
 
         .primary-btn:hover {
           background: #c0392b;
+        }
+
+        .primary-btn:disabled {
+          background: #666;
+          cursor: not-allowed;
+          opacity: 0.6;
         }
 
         .secondary-btn {
@@ -198,6 +278,8 @@ const ReviewApplicationPage = () => {
         <h3>CFL 7/7</h3>
         <h2>Review Application</h2>
       </div>
+
+      {error && <div className="error-message">{error}</div>}
 
       <div className="review-container">
         <div className="review-section">
@@ -282,11 +364,11 @@ const ReviewApplicationPage = () => {
       </div>
 
       <div className="nav-buttons">
-        <button className="secondary-btn" onClick={handleBack}>
+        <button className="secondary-btn" onClick={handleBack} disabled={loading}>
           BACK
         </button>
-        <button className="primary-btn" onClick={handleSubmit}>
-          Submit &amp; Analyze
+        <button className="primary-btn" onClick={handleSubmit} disabled={loading}>
+          {loading ? 'Submitting...' : 'Submit & Analyze'}
         </button>
       </div>
     </div>

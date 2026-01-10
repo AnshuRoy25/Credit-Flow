@@ -9,6 +9,10 @@ import {
 import AppLayout from "./AppLayout.jsx";
 import HomePage from "./Pages/Home";
 
+// Auth pages
+import LoginPage from "./Pages/LoginPage.jsx";
+import RegisterPage from "./Pages/RegisterPage.jsx";
+
 // Loan application pages
 import LoanTypesPage from "./Pages/LoanTypesPage.jsx";
 import PersonalLoanPage from "./Pages/PersonalLoanPage.jsx";
@@ -28,8 +32,12 @@ export default function App() {
     <Router>
       <Routes>
         <Route element={<AppLayout />}>
-          {/* Root path redirects to home */}
-          <Route path="/" element={<Navigate to="/home" replace />} />
+          {/* Root path redirects to login */}
+          <Route path="/" element={<Navigate to="/login" replace />} />
+          
+          {/* Auth pages */}
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
           
           {/* Home page */}
           <Route path="/home" element={<HomePage />} />

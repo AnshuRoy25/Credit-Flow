@@ -1,21 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Navbar from '../components/navbar.jsx';
 
 const ProcessingPage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [processing, setProcessing] = useState(true);
 
   useEffect(() => {
+    // Get the result from either location state or sessionStorage
+    const result = location.state?.result || JSON.parse(sessionStorage.getItem('loanResult') || '{}');
+    
+    if (!result || !result.application) {
+      // If no result, redirect back
+      navigate('/review-application');
+      return;
+    }
+
     const timer = setTimeout(() => {
       setProcessing(false);
       setTimeout(() => {
         navigate('/result');
       }, 1000);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timer);
-  }, [navigate]);
+  }, [navigate, location]);
 
   const handleSkip = () => {
     setProcessing(false);
@@ -108,6 +118,44 @@ const ProcessingPage = () => {
           text-align: center;
         }
 
+        .processing-steps {
+          background: #333;
+          border: 1px solid #444;
+          border-radius: 12px;
+          padding: 20px;
+          margin-top: 24px;
+          width: 100%;
+          max-width: 320px;
+        }
+
+        .processing-steps h4 {
+          color: #e74c3c;
+          font-size: 14px;
+          margin-bottom: 12px;
+          text-align: center;
+        }
+
+        .processing-steps ul {
+          list-style: none;
+          padding: 0;
+        }
+
+        .processing-steps li {
+          color: #aaa;
+          font-size: 13px;
+          padding: 8px 0;
+          padding-left: 24px;
+          position: relative;
+        }
+
+        .processing-steps li:before {
+          content: "✓";
+          position: absolute;
+          left: 0;
+          color: #e74c3c;
+          font-weight: bold;
+        }
+
         .nav-buttons {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -169,7 +217,18 @@ const ProcessingPage = () => {
           <>
             <div className="spinner"></div>
             <p className="processing-text">Analyzing your application...</p>
-            <p className="processing-note">This may take a few moments</p>
+            <p className="processing-note">Calculating your credit score</p>
+            
+            <div className="processing-steps">
+              <h4>Processing Steps:</h4>
+              <ul>
+                <li>Analyzing call logs</li>
+                <li>Reviewing SMS patterns</li>
+                <li>Checking location data</li>
+                <li>Verifying installed apps</li>
+                <li>Calculating credit score</li>
+              </ul>
+            </div>
           </>
         ) : (
           <p className="processing-text">Application Processed Successfully!</p>
@@ -181,7 +240,7 @@ const ProcessingPage = () => {
           BACK
         </button>
         <button className="primary-btn" onClick={handleSkip}>
-          {processing ? 'Skip Wait' : 'Next'}
+          {processing ? 'Skip Wait' : 'View Results'}
         </button>
       </div>
     </div>
