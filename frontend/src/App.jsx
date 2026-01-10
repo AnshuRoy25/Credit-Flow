@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -26,8 +26,21 @@ import ReviewApplicationPage from "./Pages/ReviewApplicationPage.jsx";
 import ProcessingPage from "./Pages/ProcessingPage.jsx";
 import ResultPage from "./Pages/ResultPage.jsx";
 
+// Import keep-alive service
+import keepAliveService from './services/keepAlive';
+
 /* ============== App Root Component ============== */
 export default function App() {
+  useEffect(() => {
+    // Start keep-alive service when app mounts
+    keepAliveService.start();
+
+    // Cleanup: stop keep-alive service when app unmounts
+    return () => {
+      keepAliveService.stop();
+    };
+  }, []);
+
   return (
     <Router>
       <Routes>
