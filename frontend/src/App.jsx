@@ -3,9 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
-  useParams,
-  useNavigate
+  Navigate
 } from "react-router-dom";
 
 import AppLayout from "./AppLayout.jsx";
@@ -25,27 +23,17 @@ import ProcessingPage from "./Pages/ProcessingPage.jsx";
 import ResultPage from "./Pages/ResultPage.jsx";
 
 /* ============== App Root Component ============== */
-import Navbar from "./components/navbar.jsx";
-
-/* ============== App Root Component ============== */
 export default function App() {
-  const [links, setLinks] = useState([]);
-
-  function addLink(title, url) {
-    setLinks((prev) => [
-      ...prev,
-      {
-        id: Date.now(),
-        title,
-        url
-      }
-    ]);
-  }
-
   return (
     <Router>
       <Routes>
         <Route element={<AppLayout />}>
+          {/* Root path redirects to home */}
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          
+          {/* Home page */}
+          <Route path="/home" element={<HomePage />} />
+          
           {/* ===== Loan Application Flow ===== */}
           <Route path="/loan-types" element={<LoanTypesPage />} />
           <Route path="/personal-loan" element={<PersonalLoanPage />} />
@@ -58,7 +46,6 @@ export default function App() {
           <Route path="/review-application" element={<ReviewApplicationPage />} />
           <Route path="/processing" element={<ProcessingPage />} />
           <Route path="/result" element={<ResultPage />} />
-          <Route path="/home" element={<HomePage />} />
         </Route>
       </Routes>
     </Router>
