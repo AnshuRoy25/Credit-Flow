@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User, Lock, ArrowLeft } from 'lucide-react';
+import { getApiUrl, shouldUseMock } from '../config/api';
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -32,8 +32,32 @@ const LoginPage = () => {
     setLoading(true);
     setError('');
 
+    // MOCK MODE - When backend is not deployed
+    if (shouldUseMock()) {
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      if (formData.username === 'demo' && formData.password === 'demo123') {
+        localStorage.setItem('token', 'mock-token-' + Date.now());
+        localStorage.setItem('user', JSON.stringify({
+          id: 'mock-user-id',
+          username: formData.username,
+          email: 'demo@creditflow.com'
+        }));
+        
+        setLoading(false);
+        navigate('/home');
+        return;
+      } else {
+        setError('Invalid credentials. Use demo/demo123');
+        setLoading(false);
+        return;
+      }
+    }
+
+    // REAL API MODE - When backend is deployed on Render
     try {
-      const response = await fetch('http://localhost:5999/api/auth/login', {
+      const response = await fetch(getApiUrl('/api/auth/login'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -47,11 +71,8 @@ const LoginPage = () => {
       const data = await response.json();
 
       if (response.ok) {
-        // Store token and user info in localStorage
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', JSON.stringify(data.user));
-        
-        // Navigate to home
         navigate('/home');
       } else {
         setError(data.error || 'Login failed. Please try again.');

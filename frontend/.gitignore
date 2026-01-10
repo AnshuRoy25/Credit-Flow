@@ -12,6 +12,15 @@ dist
 dist-ssr
 *.local
 
+# Environment files - IMPORTANT: Don't commit these!
+.env
+.env.local
+.env.development
+.env.production
+
+# Keep example env file for reference
+!.env.example
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -22,3 +31,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Vercel
+.vercel

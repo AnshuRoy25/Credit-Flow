@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/navbar.jsx';
+import { getApiUrl, shouldUseMock } from '../config/api';
 
 const ReviewApplicationPage = () => {
   const navigate = useNavigate();
@@ -55,8 +56,39 @@ const ReviewApplicationPage = () => {
     setLoading(true);
     setError('');
 
+    // MOCK MODE - When backend is not deployed
+    if (shouldUseMock()) {
+      // Simulate processing delay
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      // Generate mock credit score (50-90 range)
+      const mockCreditScore = Math.floor(Math.random() * 41) + 50;
+      const isApproved = mockCreditScore >= 60;
+      
+      const mockResult = {
+        application: {
+          _id: 'mock-app-' + Date.now(),
+          userId: 'mock-user-id',
+          status: isApproved ? 'APPROVED' : 'DECLINED',
+          creditScore: mockCreditScore,
+          loanAmount: Number(formData.loanAmount),
+          approvedAmount: isApproved ? Math.floor(Number(formData.loanAmount) * 0.85) : 0,
+          interestRate: isApproved ? 12 : 0,
+          tenure: Number(formData.tenure),
+          emi: isApproved ? calculateEMI() : 0,
+          loanType: 'Personal',
+          createdAt: new Date().toISOString(),
+        }
+      };
+
+      sessionStorage.setItem('loanResult', JSON.stringify(mockResult));
+      setLoading(false);
+      navigate('/processing', { state: { result: mockResult } });
+      return;
+    }
+
+    // REAL API MODE - When backend is deployed on Render
     try {
-      // Get token from localStorage
       const token = localStorage.getItem('token');
       
       if (!token) {
@@ -65,28 +97,22 @@ const ReviewApplicationPage = () => {
         return;
       }
 
-      // Prepare loan application data according to backend API
       const loanApplicationData = {
         loanAmount: Number(formData.loanAmount),
         tenure: Number(formData.tenure),
         loanType: 'Personal',
-        emiStartDate: '2025-03-24', // Fixed date as shown in UI
-        
-        // Employment Details (required by backend)
+        emiStartDate: '2025-03-24',
         employmentType: formData.employmentType,
-        companyName: 'N/A', // Optional
-        designation: 'N/A', // Optional
-        monthlyIncome: 50000, // You can add this to the form if needed
-        workExperienceYears: 2, // You can add this to the form if needed
-        
-        // Bank Details (required by backend)
+        companyName: 'N/A',
+        designation: 'N/A',
+        monthlyIncome: 50000,
+        workExperienceYears: 2,
         accountNumber: formData.bankAccount,
         bankName: formData.bankName,
         ifscCode: formData.ifsc,
       };
 
-      // Make API request to backend
-      const response = await fetch('http://localhost:5999/api/loan/apply-loan', {
+      const response = await fetch(getApiUrl('/api/loan/apply-loan'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -98,19 +124,16 @@ const ReviewApplicationPage = () => {
       const data = await response.json();
 
       if (response.ok) {
-        // Store the application result
         sessionStorage.setItem('loanResult', JSON.stringify(data));
-        
-        // Navigate to processing page
         navigate('/processing', { state: { result: data } });
       } else {
         setError(data.error || 'Failed to submit loan application');
-        window.alert(data.error || 'Failed to submit loan application. Please try again.');
+        window.alert(data.error || 'Failed to submit. Please try again.');
       }
     } catch (err) {
       console.error('Submit error:', err);
       setError('Unable to connect to server. Please try again later.');
-      window.alert('Unable to connect to server. Please make sure the backend is running on port 5999.');
+      window.alert('Unable to connect to server. Backend may not be deployed yet.');
     } finally {
       setLoading(false);
     }
