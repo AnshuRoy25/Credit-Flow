@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/navbar.jsx';
-import { getApiUrl, shouldUseMock } from '../config/api';
+import { getApiUrl } from '../config/api';
 
 const ReviewApplicationPage = () => {
   const navigate = useNavigate();
@@ -56,38 +56,6 @@ const ReviewApplicationPage = () => {
     setLoading(true);
     setError('');
 
-    // MOCK MODE - When backend is not deployed
-    if (shouldUseMock()) {
-      // Simulate processing delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
-
-      // Generate mock credit score (50-90 range)
-      const mockCreditScore = Math.floor(Math.random() * 41) + 50;
-      const isApproved = mockCreditScore >= 60;
-      
-      const mockResult = {
-        application: {
-          _id: 'mock-app-' + Date.now(),
-          userId: 'mock-user-id',
-          status: isApproved ? 'APPROVED' : 'DECLINED',
-          creditScore: mockCreditScore,
-          loanAmount: Number(formData.loanAmount),
-          approvedAmount: isApproved ? Math.floor(Number(formData.loanAmount) * 0.85) : 0,
-          interestRate: isApproved ? 12 : 0,
-          tenure: Number(formData.tenure),
-          emi: isApproved ? calculateEMI() : 0,
-          loanType: 'Personal',
-          createdAt: new Date().toISOString(),
-        }
-      };
-
-      sessionStorage.setItem('loanResult', JSON.stringify(mockResult));
-      setLoading(false);
-      navigate('/processing', { state: { result: mockResult } });
-      return;
-    }
-
-    // REAL API MODE - When backend is deployed on Render
     try {
       const token = localStorage.getItem('token');
       
@@ -133,7 +101,7 @@ const ReviewApplicationPage = () => {
     } catch (err) {
       console.error('Submit error:', err);
       setError('Unable to connect to server. Please try again later.');
-      window.alert('Unable to connect to server. Backend may not be deployed yet.');
+      window.alert('Unable to connect to server. Please check your connection and try again.');
     } finally {
       setLoading(false);
     }

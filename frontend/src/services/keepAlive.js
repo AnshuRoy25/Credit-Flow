@@ -1,6 +1,6 @@
 // frontend/src/services/keepAlive.js
 
-import { getApiUrl, shouldUseMock } from '../config/api';
+import { getApiUrl } from '../config/api';
 
 class KeepAliveService {
   constructor() {
@@ -16,12 +16,6 @@ class KeepAliveService {
    * Start the keep-alive service
    */
   start() {
-    // Don't start if using mock mode
-    if (shouldUseMock()) {
-      console.log('🟡 Keep-alive disabled: Using mock mode');
-      return;
-    }
-
     if (this.isRunning) {
       console.log('⚠️ Keep-alive already running');
       return;
