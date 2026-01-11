@@ -286,6 +286,35 @@ const LoginPage = () => {
           text-decoration: underline;
         }
 
+        .demo-credentials {
+          background: rgba(231, 76, 60, 0.1);
+          border: 1px solid #444;
+          border-radius: 12px;
+          padding: 16px;
+          margin-bottom: 24px;
+        }
+
+        .demo-credentials h4 {
+          color: #e74c3c;
+          font-size: 14px;
+          margin-bottom: 12px;
+          text-align: center;
+        }
+
+        .demo-credentials p {
+          color: #aaa;
+          font-size: 13px;
+          margin: 4px 0;
+          text-align: center;
+        }
+
+        .demo-credentials code {
+          color: #e74c3c;
+          background: #1a1a1a;
+          padding: 2px 6px;
+          border-radius: 4px;
+        }
+
         @media (max-width: 480px) {
           .page {
             border-radius: 0;
@@ -306,6 +335,13 @@ const LoginPage = () => {
 
       <div className="form-container">
         <h2 className="form-title">Login</h2>
+
+        {/* Demo Credentials Info */}
+        <div className="demo-credentials">
+          <h4>🔐 Demo Credentials</h4>
+          <p>Username: <code>demo</code></p>
+          <p>Password: <code>demo123</code></p>
+        </div>
 
         {error && <div className="error-message">{error}</div>}
 
